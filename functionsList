@@ -4,3 +4,4 @@ Function that checks what is the bottom most available button in a column
 Function to check for four buttons of same color
 Function for horizontal, vertical or diagonal win
 Function to check if game has ended
+Function to give random colors to heading
