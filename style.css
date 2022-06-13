@@ -14,3 +14,20 @@ h1 {
 body {
     background-color: rgb(156, 241, 229);
 }
+
+h3 {
+    text-decoration-line: overline underline;
+    text-decoration-color: black;
+}
+
+table col.hover {
+    background-color: rgb(92, 24, 0);
+}
+
+col {
+    transition: all .3s;
+}
+
+col.hover {
+    background-color: rgb(92, 24, 0);
+}
