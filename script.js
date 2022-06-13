@@ -162,9 +162,11 @@ let currentPlayer = 1;
 let currentName = player1;
 let currentColor = player1Color;
 
-$("h3").text(
-    `${player1} it is your turn, please pick a column to drop your blue chip.`
-);
+$("h3")
+    .text(
+        `${player1} it is your turn, please pick a column to drop your blue chip.`
+    )
+    .css("color", player1Color);
 
 //Game logic and event listening
 $(".board button").on("click", function gameLogic() {
@@ -188,15 +190,19 @@ $(".board button").on("click", function gameLogic() {
     // Re-Check who the current Player is.
     if (currentPlayer === 1) {
         currentName = player1;
-        $("h3").text(
-            `${currentName} it is your turn, please pick a column to drop your blue chip.`
-        );
         currentColor = player1Color;
+        $("h3")
+            .text(
+                `${currentName} it is your turn, please pick a column to drop your blue chip.`
+            )
+            .css("color", currentColor);
     } else {
         currentName = player2;
-        $("h3").text(
-            `${currentName} it is your turn, please pick a column to drop your red chip.`
-        );
         currentColor = player2Color;
+        $("h3")
+            .text(
+                `${currentName} it is your turn, please pick a column to drop your red chip.`
+            )
+            .css("color", currentColor);
     }
 });
