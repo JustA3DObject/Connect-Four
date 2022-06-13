@@ -146,17 +146,6 @@ function gameEnd(winningPlayer) {
     }
 }
 
-// Function to give random colors to header
-function changeHeaderColor() {
-    var letters = "0123456789ABCDEF";
-    var randomColor = "#";
-    for (var i = 0; i < 6; i++) {
-        randomColor += letters[Math.floor(Math.random() * 16)];
-    }
-    $("h1").css("color", randomColor);
-}
-setInterval("changeHeaderColor()", 500);
-
 //Starting
 let currentPlayer = 1;
 let currentName = player1;
