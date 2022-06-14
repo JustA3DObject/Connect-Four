@@ -134,16 +134,12 @@ function diagonalWinCheck() {
 
 // Function to end the game
 function gameEnd(winningPlayer) {
-    for (let col = 0; col < 7; col++) {
-        for (let row = 0; row < 7; row++) {
             $("h3").fadeOut("fast");
             $("h2").fadeOut("fast");
             $("h1")
                 .text(`${winningPlayer} has won! Refresh to play again!`)
                 .css("fontSize", "50px");
             $(".board button").off("click");
-        }
-    }
 }
 
 //Starting
