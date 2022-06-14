@@ -13,7 +13,7 @@ function reportWin(rowNum, colNum) {
     console.log(colNum);
 }
 
-// Function to hange the color of a button
+// Function to change the color of a button
 function changeColor(rowIndex, colIndex, color) {
     return table
         .eq(rowIndex)
