@@ -145,6 +145,8 @@ function reportWin() {
       '.win-info'
     ).innerHTML = `${player2} has won the game`;
   }
+
+  board.style.pointerEvents = 'none';
 }
 
 const winChecker = () => {
