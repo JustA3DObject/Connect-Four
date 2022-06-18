@@ -1,7 +1,7 @@
 .container {
   max-width: 70rem;
   min-height: 300px;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .board button {
@@ -17,12 +17,12 @@ h1.heading {
   font-size: clamp(3rem, 6vw, 4.5rem);
   margin: 10px auto 20px auto;
   font-weight: bold;
-  background: linear-gradient(90deg, #ff9727, #c603d0);
-  background: -webkit-linear-gradient(0deg, #ff9727, #c603d0);
+  background: linear-gradient(90deg, #ff6d18, #c603d0);
+  background: -webkit-linear-gradient(0deg, #ff6d18, #c603d0);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  animation: textColor 8s infinite ease-in-out;
+  animation: textColor 8s infinite ease-in-out alternate-reverse;
   text-shadow: 2px 2px rgb(0 0 0 / 0.1);
 }
 
@@ -37,28 +37,70 @@ h2 {
   margin: 10px auto 20px auto;
 }
 
+h2.win-info {
+  text-transform: uppercase;
+}
+
 body {
   background-color: #a5c98c;
+}
+
+.win-reset-container {
+  display: none;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.win-reset-container h2 {
+  margin-bottom: 20px;
+}
+
+.reset {
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.75rem;
+  border-radius: 6px;
+  background-color: rgb(137, 68, 181);
+  color: white;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  transition: all 0.15s ease-out;
+}
+
+.reset:hover {
+  transform: translateY(0px);
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
+  background-color: rgb(153, 93, 190);
 }
 
 .board {
   margin-top: 2.5rem;
   margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  max-width: 525px;
 }
 
-table col.hover {
-  background-color: rgb(0 0 0 / 0.35);
+.board div {
+  cursor: pointer;
 }
 
-col {
+.col {
+  border-radius: 36px;
   transition: background-color 0.5s ease-in-out;
 }
 
-col.hover {
+.col:hover {
   background-color: rgb(0 0 0 / 0.35);
 }
 
 @media only screen and (max-width: 600px) {
+  .board {
+    max-width: 340px;
+  }
+
   .board button {
     width: 45px;
     height: 45px;
